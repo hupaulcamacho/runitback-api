@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 
 // controllers
-
+const charController = require("./controllers/charController")
 // app routing
 app.get("/", (request, response) => {
     response.json({
@@ -15,6 +15,8 @@ app.get("/", (request, response) => {
         instructions: ""
     });
 });
+
+app.use("/characters", charController);
 
 // listening on port
 const PORT = 3002

@@ -1,0 +1,274 @@
+{
+    "characters": [
+        {
+            "sol": {
+                "charName": "Sol Badguy",
+                "type": "Balanced",
+                "tag": "#GGST_SOL",
+                "moves": {
+                    "normals": {
+                        "5P": { 
+                            "damage": "28", 
+                            "startup": "4f", 
+                            "active": "5f", 
+                            "recovery": "9f", 
+                            "onblock": "-2f"
+                        },
+                        "5K": {
+                            "damage": "14,28",
+                            "startup": "3f",
+                            "active": "1f,3f",
+                            "recovery": "25f",
+                            "onblock": "-14f"
+                        },
+                        "c.S": {
+                            "damage": "44",
+                            "startup": "7f",
+                            "active": "6f",
+                            "recovery": "10f",
+                            "onblock": "+3f"
+                        },
+                        "f.S": {
+                            "damage": "36",
+                            "startup": "10f",
+                            "active": "2f",
+                            "recovery": "13f",
+                            "onblock": "+2f"
+                        },
+                        "5H": {
+                            "damage": "52",
+                            "startup": "11f",
+                            "active": "4f",
+                            "recovery": "25f",
+                            "onblock": "-5f"
+                        },
+                        "5D": {
+                            "damage": "50[62]",
+                            "startup": "20~28[28]f",
+                            "active": "3f",
+                            "recovery": "27f",
+                            "onblock": "-15[-10]f"
+                        },
+                        "2P": {
+                            "damage": "22",
+                            "startup": "5f",
+                            "active": "4f",
+                            "recovery": "8f",
+                            "onblock": "-2f"
+                        },
+                        "2K": {
+                            "damage": "28",
+                            "startup": "6f",
+                            "active": "3f",
+                            "recovery": "11f",
+                            "onblock": "-2f"
+                        },
+                        "2S": {
+                            "damage": "34",
+                            "startup": "10f",
+                            "active": "3f",
+                            "recovery": "18f",
+                            "onblock": "-7f"
+                        },
+                        "2H": {
+                            "damage": "46",
+                            "startup": "11f",
+                            "active": "5f",
+                            "recovery": "31f",
+                            "onblock": "-17f"
+                        },
+                        "2D": {
+                            "damage": "26",
+                            "startup": "10f",
+                            "active": "3f",
+                            "recovery": "18f",
+                            "onblock": "-4f"
+                        },
+                        "j.P": {
+                            "damage": "24",
+                            "startup": "5f",
+                            "active": "3f",
+                            "recovery": "8f",
+                            "onblock": ""
+                        },
+                        "j.K": {
+                            "damage": "30",
+                            "startup": "6f",
+                            "active": "3f",
+                            "recovery": "20f",
+                            "onblock": ""
+                        },
+                        "j.S": {
+                            "damage": "36",
+                            "startup": "10f",
+                            "active": "3f",
+                            "recovery": "23f",
+                            "onblock": ""
+                        },
+                        "j.H": {
+                            "damage": "24x2",
+                            "startup": "11f",
+                            "active": "4f,8f",
+                            "recovery": "0f",
+                            "onblock": ""
+                        },
+                        "j.D": {
+                            "damage": "45",
+                            "startup": "9f",
+                            "active": "3f",
+                            "recovery": "17f",
+                            "onblock": ""
+                        }
+                    },
+                    "commandNormals": {
+                        "6P": {
+                            "damage": "36",
+                            "startup": "9f",
+                            "active": "5f",
+                            "recovery": "20f",
+                            "onblock": "-11f"
+                        },
+                        "6S": {
+                            "damage": "55",
+                            "startup": "15f",
+                            "active": "6f",
+                            "recovery": "20f",
+                            "onblock": "-7f"
+                        },
+                        "6H": {
+                            "damage": "60",
+                            "startup": "9f",
+                            "active": "3f",
+                            "recovery": "38f",
+                            "onblock": "-22f"
+                        }
+                    },
+                    "specials": {
+                        "Gun Flame": {
+                            "damage": "40→35→30→30",
+                            "startup": "20f",
+                            "active": "10f,10f,10f,10f",
+                            "recovery": "54f",
+                            "onblock": "-8f",
+                            "input": "236P"
+                        },
+                        "Gun Flame Feint": {
+                            "damage": "-",
+                            "startup": "-",
+                            "active": "-",
+                            "recovery": "30f",
+                            "onblock": "-",
+                            "input": "214P"
+                        },
+                        "Volcanic Viper S": {
+                            "damage": "40",
+                            "startup": "7f",
+                            "active": "2(3)4f",
+                            "recovery": "17+10f after landing ",
+                            "onblock": "-22",
+                            "input": "623S"
+                        },
+                        "Volcanic Viper S(AIR)": {
+                            "damage": "40",
+                            "startup": "7f",
+                            "active": "2(3)4f",
+                            "recovery": "Until landing+10f",
+                            "onblock": "-",
+                            "input": "623S"
+                        },
+                        "Volcanic Viper H": {
+                            "damage": "35,40[35,100] ",
+                            "startup": "13f",
+                            "active": "2(3)11f",
+                            "recovery": "17+10f after landing ",
+                            "onblock": "-26",
+                            "input": "623S"
+                        },
+                        "Volcanic Viper H(AIR)": {
+                            "damage": "35,40[35,100] ",
+                            "startup": "13f",
+                            "active": "2(3)11f",
+                            "recovery": "Until landing+10f",
+                            "onblock": "-",
+                            "input": "623S"
+                        },
+                        "Bandit Revolver": {
+                            "damage": "20,25",
+                            "startup": "16f",
+                            "active": "6f",
+                            "recovery": "23+9f after landing ",
+                            "onblock": "-7",
+                            "input": "236K"
+                        },
+                        "Bandit Revolver(AIR)": {
+                            "damage": "20,25",
+                            "startup": "10f",
+                            "active": "6f",
+                            "recovery": "Until landing+9f",
+                            "onblock": "-",
+                            "input": "236K"
+                        },
+                        "Bandit Bringer": {
+                            "damage": "50",
+                            "startup": "30f",
+                            "active": "7f",
+                            "recovery": "12f after landing ",
+                            "onblock": "-2",
+                            "input": "214K"
+                        },
+                        "Bandit Bringer(AIR)": {
+                            "damage": "40",
+                            "startup": "30f",
+                            "active": "Until landing",
+                            "recovery": "Until landing+12f",
+                            "onblock": "-",
+                            "input": "214K"
+                        },
+                        "Wild Throw": {
+                            "damage": "120",
+                            "startup": "6f",
+                            "active": "2f",
+                            "recovery": "41f",
+                            "onblock": "-",
+                            "input": "623K"
+                        },
+                        "Night Raid Vortex": {
+                            "damage": "45[55]",
+                            "startup": "15f~31[32]f",
+                            "active": "2f",
+                            "recovery": "32[26]f",
+                            "onblock": "-17",
+                            "input": "214S (Hold OK)"
+                        },
+                        "Fafnir": {
+                            "damage": "65",
+                            "startup": "24f",
+                            "active": "3f",
+                            "recovery": "16f",
+                            "onblock": "+11",
+                            "input": "41236H"
+                        }
+                    },
+                    "overdrives": {
+                        "Tyrant Rave": {
+                            "damage": "70, 100[70, 130]",
+                            "startup": "5+2f",
+                            "active": "3f",
+                            "recovery": "16f",
+                            "onblock": "-34",
+                            "input": "632146H"
+                        },
+                        "Heavy Mob Cemetary": {
+                            "damage": "40, 161",
+                            "startup": "13+7f",
+                            "active": "49f",
+                            "recovery": "84f",
+                            "onblock": "-",
+                            "input": "214214H"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
