@@ -1,0 +1,26 @@
+{
+  "name": "runitback-api",
+  "version": "1.0.0",
+  "description": "Api for the runitback web app.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hupaulcamacho/runitback-api.git"
+  },
+  "author": "Hupaul (traplordhuey)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hupaulcamacho/runitback-api/issues"
+  },
+  "homepage": "https://github.com/hupaulcamacho/runitback-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
+}
