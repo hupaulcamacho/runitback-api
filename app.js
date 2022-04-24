@@ -5,10 +5,13 @@ require("dotenv").config();
 
 // initiate app
 const app = express();
+app.use(cors())
 
 // controllers
-const charController = require("./controllers/charController")
+const charController = require("./controllers/charController");
+
 // app routing
+app.use("/characters", charController);
 app.get("/", (request, response) => {
     response.json({
         message: "Welcome to the runitback api",
@@ -16,10 +19,5 @@ app.get("/", (request, response) => {
     });
 });
 
-app.use("/characters", charController);
 
-// listening on port
-const PORT = 3002
-app.listen(PORT, () => {
-    console.log(`Server is listening on port: ${PORT}`)
-})
+module.exports = app;
