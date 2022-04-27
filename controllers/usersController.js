@@ -13,6 +13,6 @@ router.get("/", async (request, response) => {
         console.log(error);
         response.json(error);
     }
-})
+});
 
 module.exports = router;
