@@ -1,4 +1,4 @@
-\c runitback_app
+-- \c runitback_app
 
 INSERT INTO users (username, email, region, controller)
     VALUES

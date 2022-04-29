@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS runitback_app;
-CREATE DATABASE runitback_app;
-\c runitback_app;
+-- DROP DATABASE IF EXISTS runitback_app;
+-- CREATE DATABASE runitback_app;
+-- \c runitback_app;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
