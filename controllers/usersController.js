@@ -5,15 +5,15 @@ const router = express.Router();
 const db = require('../db/dbconfig');
 
 // get all users
-router.get('/', async (request, response) => {
-    try {
-        let users = await db.any('SELECT * FROM users');
-        response.json(users);
-    } catch (error) {
-        console.log(error);
-        response.json(error);
-    }
-});
+// router.get('/', async (request, response) => {
+//     try {
+//         let users = await db.any('SELECT * FROM users');
+//         response.json(users);
+//     } catch (error) {
+//         console.log(error);
+//         response.json(error);
+//     }
+// });
 
 // get user by id
 router.get('/:id', async (request, response) => {
