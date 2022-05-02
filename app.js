@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require('path');
 require("dotenv").config();
+const PORT = process.env.PORT;
 
 // initiate app and setup
 const app = express();
@@ -24,6 +25,10 @@ app.get("/", (request, response) => {
         message: "Welcome to the runitback api",
         instructions: ""
     });
+});
+
+app.listen(PORT, () => {
+    console.log(`Application is running at port ${PORT}`);
 });
 
 
