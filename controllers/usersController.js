@@ -2,12 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 // import database configuration
-const db = require('../db/dbconfig');
+const db = require('../db/dbconfig'); 
+
+// import queries
+const { getAllUsers } = require('../queries/usersQueries')
 
 // get all users
 router.get('/', async (request, response) => {
     try {
-        let users = await db.any('SELECT * FROM users');
+        let users = await getAllUsers();
         response.json(users);
     } catch (error) {
         console.log(error);
