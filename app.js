@@ -29,7 +29,7 @@ app.get("/", (request, response) => {
 
 app.listen(PORT, () => {
     console.log(`Application is running at port ${PORT}`);
-});
+}); 
 
 
 module.exports = app;
