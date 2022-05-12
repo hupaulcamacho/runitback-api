@@ -38,6 +38,7 @@ router.get('/:id', async (request, response) => {
 //create a new user
 router.post('/new', async (request, response) => {
     const { username, email, region, controller } = request.body
+    
     try {
         db.none('INSERT INTO users (username, email, region, controller) VALUES ($1, $2, $3, $4)', [username, email, region, controller]);
 
@@ -57,9 +58,19 @@ router.post('/new', async (request, response) => {
 router.put('/:id', async (request, response) => {
     const { id } = request.params;
     const { username, email, region, controller } = request.body
+    const input = {
+        username: username ? username : originalUser.username
+    }
     try {
+        let originalUser = await db.one('SELECT * FROM users WHERE id=$1', [id]);
+        const input = {
+            username: username ? username : originalUser.username,
+            email: email ? email: originalUser.email,
+            region: region ? region : originalUser.region,
+            controller: controller ? controller: originalUser.controller,
+        }
         let updatedUser = await db.one('UPDATE users SET username=$2, email=$3, region=$4, controller=$5 WHERE id = $1 RETURNING *', 
-        [id, username, email, region, controller])
+        [id, input.username, input.email, input.region, input.controller])
         response.json({
             message: 'user updated',
             updatedUser,
