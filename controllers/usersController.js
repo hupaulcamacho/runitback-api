@@ -53,6 +53,26 @@ router.post('/new', async (request, response) => {
     }
 });
 
+// Update user
+router.put('/:id', async (request, response) => {
+    const { id } = request.params;
+    const { username, email, region, controller } = request.body
+    try {
+        let updatedUser = await db.one('UPDATE users SET username=$2, email=$3, region=$4, controller=$5 WHERE id = $1 RETURNING *', 
+        [id, username, email, region, controller])
+        response.json({
+            message: 'user updated',
+            updatedUser,
+        })
+    } catch (error) {
+        console.log(error)
+        response.json({
+            message: 'Unable to update user'
+        });
+    }
+
+})
+
 // delete user
 router.delete('/delete/:id', async (request, response) => {
     const userId = request.params.id
