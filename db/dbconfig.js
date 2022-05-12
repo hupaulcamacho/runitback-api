@@ -6,7 +6,7 @@ const cn ={
     connectionString: databaseUrl
 }
 
-if(process.env.ENVIRONMENT !== 'development'){
+if(true || process.env.ENVIRONMENT !== 'development'){
     cn.ssl =  {
         rejectUnauthorized: false
       }
