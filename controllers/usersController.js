@@ -8,15 +8,15 @@ const db = require('../db/dbconfig');
 const { getAllUsers } = require('../queries/usersQueries')
 
 // get all users
-router.get('/', async (request, response) => {
-    try {
-        let users = await getAllUsers();
-        response.json(users);
-    } catch (error) {
-        console.log(error);
-        response.json(error);
-    }
-});
+// router.get('/', async (request, response) => {
+//     try {
+//         let users = await getAllUsers();
+//         response.json(users);
+//     } catch (error) {
+//         console.log(error);
+//         response.json(error);
+//     }
+// });
 
 // get user by id
 router.get('/:id', async (request, response) => {
@@ -101,4 +101,5 @@ router.delete('/delete/:id', async (request, response) => {
         });
     }
 })
+
 module.exports = router;
