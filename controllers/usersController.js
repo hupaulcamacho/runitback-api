@@ -1,8 +1,16 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (request, response) => {
-    response.json({name: "test"})
+const { getAllUsers } = require('../queries/usersQueries');
+
+
+router.get("/", async (request, response) => {
+    try {
+        const users = await getAllUsers();
+        response.json(users);
+    } catch(err){
+        response.status(500).send('error')
+    }
 });
 
 
