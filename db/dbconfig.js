@@ -6,11 +6,11 @@ const cn ={
     connectionString: databaseUrl
 }
 
-if(true || process.env.ENVIRONMENT !== 'development'){
-    cn.ssl =  {
-        rejectUnauthorized: false
-      }
-}
+// if(true || process.env.ENVIRONMENT !== 'development'){
+//     cn.ssl =  {
+//         rejectUnauthorized: false
+//       }
+// }
 
 const db = pgp(cn);
 

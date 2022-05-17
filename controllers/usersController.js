@@ -57,18 +57,17 @@ router.post('/new', async (request, response) => {
 // Update user
 router.put('/:id', async (request, response) => {
     const { id } = request.params;
-    const { username, email, region, controller } = request.body
-    const input = {
-        username: username ? username : originalUser.username
-    }
+    const { username, email, region, controller } = request.body;
+
     try {
         let originalUser = await db.one('SELECT * FROM users WHERE id=$1', [id]);
         const input = {
             username: username ? username : originalUser.username,
-            email: email ? email: originalUser.email,
+            email: email ? email : originalUser.email,
             region: region ? region : originalUser.region,
             controller: controller ? controller: originalUser.controller,
         }
+
         let updatedUser = await db.one('UPDATE users SET username=$2, email=$3, region=$4, controller=$5 WHERE id = $1 RETURNING *', 
         [id, input.username, input.email, input.region, input.controller])
         response.json({
