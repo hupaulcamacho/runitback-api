@@ -14,10 +14,12 @@ app.use(express.static(path.join(__dirname, "/../client/build")));
 // controllers
 const charController = require("./controllers/charController");
 const usersController = require("./controllers/usersController")
+const eventsController = require("./controllers/eventsController")
 
 // app routing
 app.use("/characters", charController);
 app.use("/users", usersController);
+app.use("/events", eventsController);
 
 app.get("/", (request, response) => {
     response.json({
